@@ -17,7 +17,8 @@ On the *Edit settings* tab add this *Redirect URIs* : *http://localhost:8888/cal
 
 In the *app.js* file insert the *client ID* and the *client Secret* (lines 8 and 9).
 
-In the *app.js* file insert the authorizations in the *scope* variable (line 29)
+In the *app.js* file insert the [authorizations](https://developer.spotify.com/documentation/general/guides/authorization/scopes/)
+ in the *scope* variable (line 29)
 
 ## Start the application
 
