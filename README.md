@@ -24,6 +24,7 @@ In the *app.js* file insert the [authorizations](https://developer.spotify.com/d
 
 Run the following commands :
 > npm install
+>
 > npm start
 
 ## Get a refresh token
