@@ -1,7 +1,5 @@
 var express = require('express');
 var request = require('request');
-const fs = require('fs');
-const https = require('https');
 var cors = require('cors');
 var querystring = require('querystring');
 var cookieParser = require('cookie-parser');
@@ -9,7 +7,7 @@ var cookieParser = require('cookie-parser');
 
 var client_id = '463fc0969d9240fe8d9a987478380b76'; // Your client id
 var client_secret = 'aa0d8021beeb4fda9066b177d902c698'; // Your client secret
-var redirect_uri = 'https://localhost:8888/callback';
+var redirect_uri = 'http://127.0.0.1:8888/callback';
 
 var app = express();
 
@@ -125,14 +123,5 @@ app.get('/refresh_token', function (req, res) {
   });
 });
 
-// console.log('Listening on port 8888');
-// app.listen(8888);
-
-const options = {
-  key: fs.readFileSync('server.key'),
-  cert: fs.readFileSync('server.cert')
-};
-
-https.createServer(options, app).listen(8888, () => {
-  console.log('Server running on https://localhost:8888');
-});
+console.log('Listening on port http://127.0.0.1:8888');
+app.listen(8888);
