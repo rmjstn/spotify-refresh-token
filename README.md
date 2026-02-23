@@ -11,7 +11,7 @@ You can then use this refresh token in batch scripts for example to obtain acces
 
 First you have to create an App by visiting the [Spotify for Developers Dashboard](https://developer.spotify.com/dashboard/applications).
 Note the *client ID* and the *client Secret*.
-On the *Edit settings* tab add this *Redirect URIs* : *https://localhost:8888/callback*
+On the *Edit settings* tab add this *Redirect URIs* : *https://127.0.0.1:8888/callback*
 
 ## Configure the application
 
@@ -29,15 +29,15 @@ Run the following commands :
 
 ## Get a refresh token
 
-Open the URL http://localhost:8888/ in a browser.
+Open the URL http://127.0.0.1:8888/ in a browser.
 
-By visiting the link [Login with Spotify](http://localhost:8888/login) you are prompted to sign in to Spotify.
-Following this, the Redirect URI (*http://localhost:8888/callback*) is requested.
+By visiting the link [Login with Spotify](http://127.0.0.1:8888/login) you are prompted to sign in to Spotify.
+Following this, the Redirect URI (*http://127.0.0.1:8888/callback*) is requested.
 
 The server console displays the tokens and user informations.
 
 ## Get a new token
 
-By visiting the link [Obtain a new token using the refresh token](http://localhost:8888/refresh_token?refresh_token=) you get a new token with a validity of one hour.
+By visiting the link [Obtain a new token using the refresh token](http://127.0.0.1:8888/refresh_token?refresh_token=) you get a new token with a validity of one hour.
 
 The server console displays the tokens informations.
