@@ -1,5 +1,7 @@
 var express = require('express');
 var request = require('request');
+const fs = require('fs');
+const https = require('https');
 var cors = require('cors');
 var querystring = require('querystring');
 var cookieParser = require('cookie-parser');
@@ -123,5 +125,14 @@ app.get('/refresh_token', function (req, res) {
   });
 });
 
-console.log('Listening on port 8888');
-app.listen(8888);
+// console.log('Listening on port 8888');
+// app.listen(8888);
+
+const options = {
+  key: fs.readFileSync('server.key'),
+  cert: fs.readFileSync('server.cert')
+};
+
+https.createServer(options, app).listen(8888, () => {
+  console.log('Server running on https://localhost:8888');
+});
