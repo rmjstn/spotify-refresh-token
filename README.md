@@ -11,7 +11,7 @@ You can then use this refresh token in batch scripts for example to obtain acces
 
 First you have to create an App by visiting the [Spotify for Developers Dashboard](https://developer.spotify.com/dashboard/applications).
 Note the *client ID* and the *client Secret*.
-On the *Edit settings* tab add this *Redirect URIs* : *https://127.0.0.1:8888/callback*
+On the *Edit settings* tab add this *Redirect URIs* : *http://127.0.0.1:8888/callback*
 
 ## Configure the application
 
